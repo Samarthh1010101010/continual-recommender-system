@@ -23,6 +23,8 @@ def _model_display(model: str, lam: float | None) -> str:
         return f"EWC ({int(lam)})" if lam is not None else "EWC"
     if m == "hybrid":
         return f"Hybrid ({int(lam)})" if lam is not None else "Hybrid"
+    if m == "joint":
+        return "Joint (upper bound)"
     return model
 
 
@@ -34,6 +36,7 @@ def _sort_key(name: str) -> int:
         "EWC (100)",
         "Hybrid (10)",
         "Hybrid (100)",
+        "Joint (upper bound)",
     ]
     return order.index(name) if name in order else 999
 

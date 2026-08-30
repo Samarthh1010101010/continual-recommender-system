@@ -11,7 +11,8 @@ if torch.cuda.is_available():
     print(f"Device count: {torch.cuda.device_count()}")
     print(f"Current device: {torch.cuda.current_device()}")
     print(f"Device name: {torch.cuda.get_device_name(0)}")
-    print("\n✓ GPU is available - experiments will run FASTER")
+    print("\n[OK] GPU is available - experiments will run FASTER")
 else:
-    print("\n✗ GPU NOT available - experiments will run on CPU (slower)")
+    print("\n[INFO] GPU NOT available - experiments will run on CPU (slower)")
 print("="*60)
+
